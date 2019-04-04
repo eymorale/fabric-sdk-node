@@ -58,6 +58,7 @@ module.exports.X509WalletMixin = require('./lib/impl/wallet/x509walletmixin');
 module.exports.HSMWalletMixin = require('./lib/impl/wallet/hsmwalletmixin');
 module.exports.FileSystemWallet = require('./lib/impl/wallet/filesystemwallet');
 module.exports.CouchDBWallet = require('./lib/impl/wallet/couchdbwallet');
+module.exports.CertificateManagerWallet = require('./lib/impl/wallet/certificatemanagerwallet.js');
 module.exports.DefaultEventHandlerStrategies = require('fabric-network/lib/impl/event/defaulteventhandlerstrategies');
 module.exports.DefaultQueryHandlerStrategies = require('fabric-network/lib/impl/query/defaultqueryhandlerstrategies');
 module.exports.CheckpointFactories = require('fabric-network/lib/impl/event/checkpointfactories');

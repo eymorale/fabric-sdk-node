@@ -172,6 +172,21 @@ export interface CouchDBWalletOptions {
 	url: string;
 }
 
+export class CertificateManagerWallet implements Wallet {
+	constructor(options: CertificateManagerWalletOptions, mixin?: WalletMixin)
+	public delete(label: string): Promise<void>;
+	public exists(label: string): Promise<boolean>;
+	public export(label: string): Promise<Identity>;
+	public import(label: string, identity: Identity): Promise<void>;
+	public list(): Promise<IdentityInfo[]>;
+}
+
+export interface CertificateManagerWalletOptions {
+	url: string;
+	apiKey: string;
+	instanceId: string;
+}
+
 export interface WalletMixin {} // tslint:disable-line:no-empty-interface
 
 export class X509WalletMixin implements WalletMixin {
